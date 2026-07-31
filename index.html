@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 | 自我介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e8e4ff 0%, #e0f0ff 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 头部大标题 */
+        .header {
+            text-align: center;
+            padding: 60px 0;
+        }
+        .header h1 {
+            font-size: 48px;
+            color: #4b3b8a;
+            margin-bottom: 12px;
+        }
+        .header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* 通用板块样式 */
+        .section {
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 18px;
+            padding: 35px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(6px);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section h2 {
+            color: #57439c;
+            margin-bottom: 24px;
+            font-size: 26px;
+            border-left: 5px solid #8c78d8;
+            padding-left: 14px;
+        }
+
+        /* 项目容器：横向弹性布局 */
+        .project-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* 项目按钮卡片 */
+        .project-btn {
+            display: block;
+            background: linear-gradient(90deg, #d8cfff, #cbe4ff);
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .project-btn:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(140, 120, 216, 0.28);
+        }
+        .project-btn h3 {
+            color: #4b3b8a;
+            margin-bottom: 10px;
+        }
+        .project-btn p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* 底部联系区域 */
+        .contact {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #cbc0f0;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 18px;
+        }
+        .contact-info a {
+            color: #544099;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 移动端适配 */
+        @media(max-width:600px){
+            .header h1{
+                font-size:34px;
+            }
+            .section{
+                padding:24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 顶部大标题 -->
+    <div class="header">
+        <h1>你的姓名</h1>
+        <p>一句话标语 / 职业标签，例如：前端爱好者 | 创作者 | 工程师</p>
+    </div>
+
+    <!-- 自我介绍板块 -->
+    <div class="section">
+        <h2>自我介绍</h2>
+        <p>
+            在这里填写你的个人介绍，可以写你的兴趣、擅长技能、学习/工作经历、个人追求。
+            <br><br>
+            示例：热爱技术与创意，喜欢不断学习新事物，擅长网页开发、视觉设计。做事认真有耐心，乐于交流分享，持续探索更好的作品。
+        </p>
+    </div>
+
+    <!-- 项目板块（横向卡片布局） -->
+    <div class="section">
+        <h2>项目</h2>
+        <div class="project-wrap">
+            <a class="project-btn" href="https://github.com/" target="_blank">
+                <h3>项目名称一</h3>
+                <p>项目描述：简单介绍项目功能、使用技术、实现效果。点击查看项目</p>
+            </a>
+            <a class="project-btn" href="shturl.cc/1uQaTnxP" target="_blank">
+                <h3>项目名称二</h3>
+                <p>项目描述：简单介绍项目功能、使用技术、实现效果。点击查看项目</p>
+            </a>
+            <a class="project-btn" href="https://www.example.com/" target="_blank">
+                <h3>项目名称三</h3>
+                <p>项目描述：简单介绍项目功能、使用技术、实现效果。点击查看项目</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="contact">
+        <h2>联系我</h2>
+        <div class="contact-info">
+            <p>微信：<span>你的微信号</span></p>
+            <p>邮箱：<a href="mailto:xxx@example.com">xxx@example.com</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
